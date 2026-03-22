@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slither.io | HaiZuka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta 
+        name='viewport' 
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+    />
+</head>
+<body>
+    <div id="overlay" style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 10;">
+        <div style="background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <h2 style="margin-top: 0; font-family: Arial, sans-serif;">Enter your name & Select Head</h2>
+            <input type="text" id="playerName" placeholder="Player Name" style="font-size: 20px; padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; outline: none; width: calc(100% - 20px); box-sizing: border-box;">
+            <div id="headSelection" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 20px;">
+                <img src="images/head1.png" class="head-opt" data-idx="1" style="width: 50px; cursor: pointer; border: 3px solid #4CAF50; border-radius: 50%;">
+                <img src="images/head2.png" class="head-opt" data-idx="2" style="width: 50px; cursor: pointer; border: 3px solid transparent; border-radius: 50%;">
+                <img src="images/head3.png" class="head-opt" data-idx="3" style="width: 50px; cursor: pointer; border: 3px solid transparent; border-radius: 50%;">
+                <img src="images/head4.png" class="head-opt" data-idx="4" style="width: 50px; cursor: pointer; border: 3px solid transparent; border-radius: 50%;">
+                <img src="images/head5.png" class="head-opt" data-idx="5" style="width: 50px; cursor: pointer; border: 3px solid transparent; border-radius: 50%;">
+                <img src="images/head6.png" class="head-opt" data-idx="6" style="width: 50px; cursor: pointer; border: 3px solid transparent; border-radius: 50%;">
+            </div>
+            <button id="playBtn" style="font-size: 20px; padding: 5px 20px; cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 5px;">Play</button>
+        </div>
+    </div>
+    <div id="gameOverOverlay" style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 10;">
+        <div style="background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 0 15px rgba(255,0,0,0.5);">
+            <h2 style="margin-top: 0; font-family: Arial, sans-serif; color: red;">Game Over!</h2>
+            <p id="finalScoreText" style="font-size: 24px; font-weight: bold; margin: 20px 0;"></p>
+            <button id="replayBtn" style="font-size: 20px; padding: 5px 20px; cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 5px;">Play Again</button>
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="js/food.js"></script>
+<script type="text/javascript" src="js/snake.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+</html>
